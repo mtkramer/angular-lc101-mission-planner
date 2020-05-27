@@ -1,7 +1,9 @@
 <h3>Experiments</h3>
 <ul>
   <li *ngFor="let experiment of experiments">
-    <span *ngIf="editing !== experiment; else editingTemplate" (click)="editing=experiment">{{experiment}}</span>
+    <span *ngIf="editing !== experiment; else editingTemplate" (click)="editing=experiment">{{experiment}}
+      <button (click)="removeExperiment(experiment)">remove</button>
+    </span>
   </li>
 
   <ng-template #editingTemplate>

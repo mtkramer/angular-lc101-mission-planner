@@ -22,6 +22,10 @@ export class ExperimentsComponent implements OnInit {
     this.editing = '';
   }
 
+  removeExperiment(experiment): void {
+    this.experiments.splice(this.experiments.indexOf(experiment), 1);
+  }
+
   ngOnInit() {
   }
 
