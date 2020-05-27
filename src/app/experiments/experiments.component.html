@@ -1,6 +1,9 @@
 <h3>Experiments</h3>
 <ul>
-  <li>Mars soil sample</li>
-  <li>Plant growth in habitat</li>
-  <li>Human bone density</li>
+  <li *ngFor="let experiment of experiments">{{experiment}}</li>
+
+  <li>
+    <input #addInput (keyup.enter)="addExperiment(addInput.value); addInput.value='';" type="text">
+    <button (click)="addExperiment(addInput.value); addInput.value='';">add</button>
+  </li>
 </ul>
