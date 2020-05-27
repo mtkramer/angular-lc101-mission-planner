@@ -13,8 +13,6 @@ export class CrewComponent implements OnInit {
     { name: "Ellen Ochoa", firstMission: true }
   ];
 
-  equpment = ['Habitat dome', 'Drones', 'Food containers', 'Oxygen tanks'];
-
   isFirstMission = false;
   memberBeingEdited: object;
 
