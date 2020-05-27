@@ -10,7 +10,6 @@
       <input #newCrewName (keyup.enter)="save(newCrewName.value, crewMember); newCrewName.value='';"
         value={{crewMember.name}} type="text" autofocus>
       <button (click)="save(newCrewName.value, crewMember); newCrewName.value='';">save</button>
-      <p>{{newCrewName.value}} {{crewMember}}</p>
     </ng-template>
   </li>
   <input #newCrewInput

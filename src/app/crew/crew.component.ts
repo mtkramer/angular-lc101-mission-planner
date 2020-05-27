@@ -13,13 +13,22 @@ export class CrewComponent implements OnInit {
     { name: "Ellen Ochoa", firstMission: true }
   ];
 
+  equpment = ['Habitat dome', 'Drones', 'Food containers', 'Oxygen tanks'];
+
   isFirstMission = false;
   memberBeingEdited: object;
 
   constructor() { }
 
   addCrewMember(name): void {
-    this.crew.push({ name: name, firstMission: this.isFirstMission });
+    let match = false;
+    for (let member of this.crew) {
+      if (member['name'] === name) {
+        match = true;
+        break;
+      }
+    }
+    !match ? this.crew.push({ name: name, firstMission: this.isFirstMission }) : null;
   }
 
   removeCrewMember(crewMember: object): void {
